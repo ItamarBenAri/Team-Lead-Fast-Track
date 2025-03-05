@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>כניסה לקבוצת פייבוקס - הגרלת פיג'ו 107</title>
     <script>
-        function redirect() {
+        function openExternal() {
             var link = "https://link.payboxapp.com/CTFmo736ptDhYFTY7";
+            var userAgent = navigator.userAgent.toLowerCase();
             
-            // פתיחה בכוח דרך דפדפן Chrome באנדרואיד
-            if (navigator.userAgent.toLowerCase().includes("android")) {
-                window.location.href = "googlechrome://navigate?url=" + encodeURIComponent(link);
+            // אם זה אנדרואיד - פתיחה בכוח דרך Intent
+            if (userAgent.includes("android")) {
+                window.location.href = "intent://link.payboxapp.com/CTFmo736ptDhYFTY7#Intent;scheme=https;package=com.android.chrome;end;";
             } 
-            // פתיחה דרך דפדפן Safari ב-iOS
-            else if (navigator.userAgent.toLowerCase().includes("iphone") || navigator.userAgent.toLowerCase().includes("ipad")) {
-                window.location.href = "" + link; // לאייפון מספיק הפניה רגילה
+            // אם זה אייפון - פתיחה ב-window.open
+            else if (userAgent.includes("iphone") || userAgent.includes("ipad")) {
+                window.open(link, "_system");
             } 
             // fallback - פתיחה רגילה
             else {
-                window.location.href = link;
+                window.open(link, "_blank");
             }
         }
-        setTimeout(redirect, 2000);
     </script>
 </head>
-<body>
+<body onload="openExternal()">
     <h2>מעביר אותך לקבוצת פייבוקס...</h2>
-    <p>אם זה לא קרה אוטומטית, <a href="https://link.payboxapp.com/CTFmo736ptDhYFTY7">לחץ כאן</a>.</p>
+    <p>אם זה לא קרה אוטומטית, <a href="javascript:openExternal();">לחץ כאן</a>.</p>
 </body>
 </html>
