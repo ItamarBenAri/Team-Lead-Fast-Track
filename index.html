@@ -42,14 +42,36 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        .android-warning {
+            display: none;
+            color: red;
+            font-weight: bold;
+            margin-top: 15px;
+        }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const userAgent = navigator.userAgent.toLowerCase();
+            if (userAgent.includes("android")) {
+                document.getElementById("android-warning").style.display = "block";
+            }
+        });
+    </script>
 </head>
 
 <body>
     <div class="container">
         <h2>לחצ/י על הכפתור כדי להיכנס לקבוצת פייבוקס</h2>
         <p>יש ללחוץ על הכפתור כדי להיכנס</p>
-        <a href="https://link.payboxapp.com/CTFmo736ptDhYFTY7" class="button">לחצי כאן</a>
+        <a href="https://link.payboxapp.com/CTFmo736ptDhYFTY7" class="button">לחצ/י כאן</a>
+
+        <p id="android-warning" class="android-warning">
+            📢 למשתמשי אנדרואיד:
+            <br> 🔹 לחצו על הקישור – זה יפתח את אפליקציית פייבוקס
+            <br> 🔹 חזרו לכאן ולחצו שוב כדי להיכנס לקבוצה
+            <br> 🛠 אם זה לא עובד – חפשו את הקבוצה בתוך פייבוקס ידנית
+        </p>
     </div>
 </body>
 
