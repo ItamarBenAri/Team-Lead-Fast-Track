@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>כניסה לקבוצת פייבוקס</title>
+    <title>כניסה לקבוצת פייבוקס - הגרלת פיג'ו 107</title>
     <script>
         function redirect() {
-            window.location.href = "https://link.payboxapp.com/CTFmo736ptDhYFTY7";
+            var link = "https://link.payboxapp.com/CTFmo736ptDhYFTY7";
+            
+            // פתיחה בכוח דרך דפדפן Chrome באנדרואיד
+            if (navigator.userAgent.toLowerCase().includes("android")) {
+                window.location.href = "googlechrome://navigate?url=" + encodeURIComponent(link);
+            } 
+            // פתיחה דרך דפדפן Safari ב-iOS
+            else if (navigator.userAgent.toLowerCase().includes("iphone") || navigator.userAgent.toLowerCase().includes("ipad")) {
+                window.location.href = "" + link; // לאייפון מספיק הפניה רגילה
+            } 
+            // fallback - פתיחה רגילה
+            else {
+                window.location.href = link;
+            }
         }
-        setTimeout(redirect, 2000); // מעביר אחרי 2 שניות
+        setTimeout(redirect, 2000);
     </script>
 </head>
 <body>
