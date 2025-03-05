@@ -45,20 +45,27 @@
     </style>
     <script>
         function openExternal() {
-            var link = "https://link.payboxapp.com/CTFmo736ptDhYFTY7";
-            var userAgent = navigator.userAgent.toLowerCase();
+            const link = "https://link.payboxapp.com/CTFmo736ptDhYFTY7";
+            const androidIntent = "intent://link.payboxapp.com/CTFmo736ptDhYFTY7#Intent;scheme=https;package=com.bankleumi.paybox;end;";
+
+            const userAgent = navigator.userAgent.toLowerCase();
 
             console.log("User Agent:", userAgent); // Debugging
 
-            // Open the link based on the user's device
             if (userAgent.includes("android")) {
-                window.open(link, "_blank");
-            } else if (userAgent.includes("iphone") || userAgent.includes("ipad")) {
-                window.location.href = link;
-            } else {
+                window.location.href = androidIntent;
+                setTimeout(() => {
+                    window.location.href = link; // fallback to web if intent fails
+                }, 2000);
+            }
+            else if (userAgent.includes("iphone") || userAgent.includes("ipad")) {
+                window.location.href = link; // iOS handles it normally
+            }
+            else {
                 window.open(link, "_blank");
             }
         }
+
     </script>
 </head>
 
