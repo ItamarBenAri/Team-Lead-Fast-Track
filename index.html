@@ -40,6 +40,7 @@
             text-decoration: none;
             font-size: 16px;
             border-radius: 5px;
+            cursor: pointer;
         }
     </style>
     <script>
@@ -47,29 +48,25 @@
             var link = "https://link.payboxapp.com/CTFmo736ptDhYFTY7";
             var userAgent = navigator.userAgent.toLowerCase();
 
-            // פתיחה בכוח בדפדפן באנדרואיד
-            // פתיחה בכוח דרך דפדפן Chrome באנדרואיד
-            if (navigator.userAgent.toLowerCase().includes("android")) {
-                window.location.href = "googlechrome://navigate?url=" + encodeURIComponent(link);
-            }
-            // פתיחה דרך Safari ב-iOS
-            else if (userAgent.includes("iphone") || userAgent.includes("ipad")) {
-                window.open(link, "_system");
-            }
-            // fallback - פתיחה רגילה
-            else {
+            console.log("User Agent:", userAgent); // Debugging
+
+            // Open the link based on the user's device
+            if (userAgent.includes("android")) {
+                window.open(link, "_blank");
+            } else if (userAgent.includes("iphone") || userAgent.includes("ipad")) {
+                window.location.href = link;
+            } else {
                 window.open(link, "_blank");
             }
         }
-        window.onload = openExternal; // הפעלת הפונקציה אוטומטית בטעינת הדף
     </script>
 </head>
 
 <body>
     <div class="container">
-        <h2>מעביר אותך לקבוצת פייבוקס...</h2>
-        <p>אם זה לא קרה אוטומטית, ניתן ללחוץ שוב</p>
-        <a href="javascript:openExternal();" class="button">לחץ כאן</a>
+        <h2>לחצ/י על הכפתור כדי להיכנס לקבוצת פייבוקס</h2>
+        <p>יש ללחוץ על הכפתור כדי להיכנס</p>
+        <button class="button" onclick="openExternal();">לחצ/י כאן</button>
     </div>
 </body>
 
