@@ -43,37 +43,13 @@
             cursor: pointer;
         }
     </style>
-    <script>
-        function openExternal() {
-            const link = "https://link.payboxapp.com/CTFmo736ptDhYFTY7";
-            const androidIntent = "intent://link.payboxapp.com/CTFmo736ptDhYFTY7#Intent;scheme=https;package=com.bankleumi.paybox;end;";
-
-            const userAgent = navigator.userAgent.toLowerCase();
-
-            console.log("User Agent:", userAgent); // Debugging
-
-            if (userAgent.includes("android")) {
-                window.location.href = androidIntent;
-                setTimeout(() => {
-                    window.location.href = link; // fallback to web if intent fails
-                }, 2000);
-            }
-            else if (userAgent.includes("iphone") || userAgent.includes("ipad")) {
-                window.location.href = link; // iOS handles it normally
-            }
-            else {
-                window.open(link, "_blank");
-            }
-        }
-
-    </script>
 </head>
 
 <body>
     <div class="container">
         <h2>לחצ/י על הכפתור כדי להיכנס לקבוצת פייבוקס</h2>
         <p>יש ללחוץ על הכפתור כדי להיכנס</p>
-        <button class="button" onclick="openExternal();">לחצ/י כאן</button>
+        <a href="https://link.payboxapp.com/CTFmo736ptDhYFTY7" class="button">לחצי כאן</a>
     </div>
 </body>
 
