@@ -121,14 +121,6 @@
         <button id="copy" class="btn-share">העתק קישור לשיתוף</button>
       </div>
 
-      <nav>
-        <button data-go="s1">מעבר ל-1</button>
-        <button data-go="s2">מעבר ל-2</button>
-        <button data-go="s3">מעבר ל-3</button>
-        <button data-go="s4">מעבר ל-4</button>
-        <button data-go="s5">מעבר ל-5</button>
-      </nav>
-
       <footer>
         <div>גרסה אישית — שמור בדפדפן</div>
         <div><small id="quote">"עשה את הצעד — האחרים יסתכלו"</small></div>
@@ -148,7 +140,6 @@
     document.getElementById('prev').addEventListener('click',()=>show(Math.max(0,idx-1)));
 
     // nav buttons
-    document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',e=>{show(slides.findIndex(s=>s.id===b.dataset.go));}));
     document.querySelectorAll('.step').forEach(b=>b.addEventListener('click',e=>{const id=b.dataset.slide; show(slides.findIndex(s=>s.id===id));}));
 
     // persistence for checkboxes
