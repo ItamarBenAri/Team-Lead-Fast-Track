@@ -1,108 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="he" dir="rtl">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://itamar-ben-ari.com/assets/favicon.ico" />
-
-    <!-- Optimization for search engines -->
-    <meta name="description"
-        content="הגרלת פיג'ו 107 ב-80 ש״ח בלבד! כרטיסים מוגבלים, הצטרפו עכשיו ואולי תזכו ברכב!" />
-    <meta name="keywords"
-        content="הגרלה, רכב, פיג'ו 107, מכירת רכב, כרטיס להגרלה, זכייה, רכב בזול, קבוצת פייבוקס, איתמר בן ארי" />
-    <meta property="og:title" content="הגרלת פיג'ו 107 – רק 80 ש״ח לכרטיס!" />
-    <meta property="og:description"
-        content="אל תפספסו! פיג'ו 107 יכולה להיות שלכם ב-80 ש״ח בלבד. מספר הכרטיסים מוגבל, הצטרפו עכשיו!" />
-    <meta property="og:image"
-        content="https://itamar-ben-ari.com/assets/image.png" />
-    <meta property="og:url" content="https://itamar-ben-ari.com/assets/image.png" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="הגרלת פיג'ו 107 – רק 80 ש״ח לכרטיס!" />
-    <meta name="twitter:description"
-        content="הצטרפו להגרלה עכשיו ואולי תזכו בפיג'ו 107. מספר המקומות מוגבל!" />
-    <meta name="twitter:image"
-        content="https://itamar-ben-ari.com/assets/image.png" />
-
-    <title>כניסה לקבוצת פייבוקס - הגרלת פיג'ו 107</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-            direction: rtl;
-        }
-
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            margin: auto;
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        p {
-            color: #666;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .android-warning {
-            display: none;
-            color: #d35400;
-            font-weight: bold;
-            margin-top: 15px;
-            padding: 10px;
-            border: 2px solid #d35400;
-            border-radius: 8px;
-            background-color: #fff3e0;
-            text-align: center;
-            max-width: 350px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const userAgent = navigator.userAgent.toLowerCase();
-            if (userAgent.includes("android")) {
-                document.getElementById("android-warning").style.display = "block";
-            }
-        });
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>מסלול מואץ לראש צוות — מצגת אינטראקטיבית</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#8b5cf6;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
+    html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Arial;background:linear-gradient(180deg,#071029 0%,#081028 60%);color:#e6eef8}
+    .wrap{max-width:980px;margin:28px auto;padding:20px}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+    h1{font-size:20px;margin:0}
+    .sub{color:var(--muted);font-size:13px}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 24px rgba(2,6,23,0.6);}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    .step{background:var(--glass);padding:12px;border-radius:10px}
+    .controls{display:flex;gap:8px;margin-top:16px}
+    button{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:inherit;cursor:pointer}
+    button.primary{background:linear-gradient(90deg,var(--accent),#06b6d4);color:#041827;border:0}
+    nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+    .slide{display:none;padding:18px;margin-top:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px}
+    .slide.active{display:block}
+    .progress{height:8px;background:rgba(255,255,255,0.05);border-radius:20px;overflow:hidden;margin-top:14px}
+    .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#06b6d4);width:0%}
+    ul.checklist{padding-left:18px}
+    li.item{margin:10px 0;display:flex;align-items:flex-start;gap:10px}
+    .persist{margin-top:12px;color:var(--muted);font-size:13px}
+    footer{display:flex;justify-content:space-between;align-items:center;margin-top:18px;color:var(--muted)}
+    .btn-share{border-style:dashed}
+    small{color:var(--muted)}
+    /* responsive */
+    @media (max-width:720px){.steps{grid-template-columns:repeat(2,1fr)}header{flex-direction:column;align-items:flex-start;gap:8px}}
+  </style>
 </head>
-
 <body>
-    <div class="container">
-        <h2>לחצ/י על הכפתור כדי להיכנס לקבוצת פייבוקס</h2>
-        <p>יש ללחוץ על הכפתור כדי להיכנס</p>
-        <a href="https://link.payboxapp.com/CTFmo736ptDhYFTY7" class="button">לחצ/י כאן</a>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>מסלול מואץ — להפוך לראש צוות</h1>
+        <div class="sub">מצגת אינטראקטיבית — גירסת פעולה מהירה ומוטיבציה</div>
+      </div>
+      <div style="text-align:right">
+        <div class="sub">סטטוס: <strong id="status">מוכן</strong></div>
+        <small>שמור מקומית — שיעורי ההתקדמות נשמרים</small>
+      </div>
+    </header>
 
-        <p id="android-warning" class="android-warning">
-            📢 למשתמשי אנדרואיד:<br>
-            ייתכן שהקישור לא יפעל כראוי.<br>
-            🔹 לחצו על הכפתור – זה יפתח את אפליקציית פייבוקס.<br>
-            אם האפליקציה נפתחת אך הקבוצה לא, חזרו לכאן ולחצו שוב על הכפתור.
-        </p>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:center">
+        <div>
+          <strong>חמישה שלבים מרכזיים</strong>
+          <div class="sub">לחץ על שלב כדי לצפות בהמלצות, ואז בחר "התחל"</div>
+        </div>
+        <div style="width:46%">
+          <div class="progress" title="התקדמות כללית"><i id="prog"></i></div>
+        </div>
+      </div>
+
+      <div class="steps" aria-hidden="false">
+        <button class="step" data-slide="s1">1 — לברר מנגנון החלטה</button>
+        <button class="step" data-slide="s2">2 — נראות מחוץ לצוות</button>
+        <button class="step" data-slide="s3">3 — למלא תפקידי ראש צוות</button>
+        <button class="step" data-slide="s4">4 — לזהות חלונות הזדמנות</button>
+        <button class="step" data-slide="s5">5 — לשוחח עם המנהל</button>
+      </div>
+
+      <div id="slides">
+        <section id="s1" class="slide">
+          <h3>1 — לברר את מנגנון ההחלטה</h3>
+          <ul class="checklist">
+            <li class="item"><input type="checkbox" data-id="once-1"> לברר מי מחליט על קידום (מנהל ישיר / CTO / HR)</li>
+            <li class="item"><input type="checkbox" data-id="once-2"> לברר איך תהליך הקידום מתועד — קריטריונים, מסמכים, מועדים</li>
+            <li class="item"><input type="checkbox" data-id="once-3"> לשאול האם מעדיפים קידום מבפנים או גיוס חיצוני</li>
+          </ul>
+          <p class="persist">טיפ מהיר: שאל בצורה שאינה תובענית — "אני מבקש להבין איך המערכת עובדת כדי לתכנן את התפתחותי".</p>
+        </section>
+
+        <section id="s2" class="slide">
+          <h3>2 — נראות מחוץ לצוות</h3>
+          <ul class="checklist">
+            <li class="item"><input type="checkbox" data-id="week-1"> להשתתף בפגישה בין־צוותית השבוע</li>
+            <li class="item"><input type="checkbox" data-id="week-2"> לשלוח עדכון שבועי קצר ל-CTO/מנהל חטיבה (או להעתיק אותם)
+            </li>
+            <li class="item"><input type="checkbox" data-id="week-3"> להציע סשן ידע/פיתוח לצוות פרונט אחת לחודש</li>
+          </ul>
+        </section>
+
+        <section id="s3" class="slide">
+          <h3>3 — למלא תפקידי ראש צוות בפועל</h3>
+          <ul class="checklist">
+            <li class="item"><input type="checkbox" data-id="week-4"> להוביל Code Review ולתעד החלטות ארכיטקטוניות</li>
+            <li class="item"><input type="checkbox" data-id="week-5"> להקציב ומשימות + לעקוב ולסכם שבועי</li>
+            <li class="item"><input type="checkbox" data-id="week-6"> לקחת אחריות על KPI אחד טכני/עסקי</li>
+          </ul>
+        </section>
+
+        <section id="s4" class="slide">
+          <h3>4 — לזהות חלונות הזדמנות</h3>
+          <ul class="checklist">
+            <li class="item"><input type="checkbox" data-id="once-4"> למפות מועמדי מעבר/עזיבה אפשריים בחצי השנה הקרובה</li>
+            <li class="item"><input type="checkbox" data-id="once-5"> לבדוק אם מתכננים פתיחת צוותים/פרויקטים חדשים</li>
+            <li class="item"><input type="checkbox" data-id="once-6"> להתרכז בפרויקט שניתן להציג כהצלחת ניהולית</li>
+          </ul>
+        </section>
+
+        <section id="s5" class="slide">
+          <h3>5 — ליזום שיחה יזומה עם המנהל</h3>
+          <ol>
+            <li>להכין 3 הישגים מדידים ועל מה תרצה לעבוד בתפקיד (3–6 חודשים).</li>
+            <li>לבקש פידבק והכוונה מהראש צוות לגבי פערים לשיפור.</li>
+            <li>להציע טווח ברור — מתי תרצה התקדמות ומדדים להערכת הצלחה.</li>
+          </ol>
+          <p class="persist">דוגמא לפתיחה: "אני מעוניין להתקדם לתפקיד ניהולי, אשמח לשמוע מה לדעתך חסר לי ואיך ניתן לקדם אותי בשלושה החודשים הקרובים".</p>
+        </section>
+      </div>
+
+      <div class="controls">
+        <button id="prev">← הקודם</button>
+        <button id="next" class="primary">הבא →</button>
+        <button id="reset">אפס בדיקה</button>
+        <button id="copy" class="btn-share">העתק קישור לשיתוף</button>
+      </div>
+
+      <nav>
+        <button data-go="s1">מעבר ל-1</button>
+        <button data-go="s2">מעבר ל-2</button>
+        <button data-go="s3">מעבר ל-3</button>
+        <button data-go="s4">מעבר ל-4</button>
+        <button data-go="s5">מעבר ל-5</button>
+      </nav>
+
+      <footer>
+        <div>גרסה אישית — שמור בדפדפן</div>
+        <div><small id="quote">"עשה את הצעד — האחרים יסתכלו"</small></div>
+      </footer>
     </div>
-</body>
+  </div>
 
+  <script>
+    // slide logic
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const prog = document.getElementById('prog');
+    let idx = 0;
+    function show(i){slides.forEach(s=>s.classList.remove('active'));slides[i].classList.add('active'); idx=i; updateProg();}
+    function updateProg(){prog.style.width = ((idx+1)/slides.length*100) + '%'; document.getElementById('status').textContent = (idx+1)+'/'+slides.length}
+    show(0);
+    document.getElementById('next').addEventListener('click',()=>show(Math.min(slides.length-1,idx+1)));
+    document.getElementById('prev').addEventListener('click',()=>show(Math.max(0,idx-1)));
+
+    // nav buttons
+    document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',e=>{show(slides.findIndex(s=>s.id===b.dataset.go));}));
+    document.querySelectorAll('.step').forEach(b=>b.addEventListener('click',e=>{const id=b.dataset.slide; show(slides.findIndex(s=>s.id===id));}));
+
+    // persistence for checkboxes
+    const inputs = Array.from(document.querySelectorAll('input[type=checkbox]'));
+    const key = 'itamar-presentation-state-v1';
+    function load(){try{const raw=localStorage.getItem(key); if(!raw) return; const obj=JSON.parse(raw); inputs.forEach(i=>{i.checked = !!obj[i.dataset.id]})}catch(e){console.warn(e)}}
+    function save(){const obj={}; inputs.forEach(i=>obj[i.dataset.id]=i.checked); localStorage.setItem(key,JSON.stringify(obj));updateProgFromChecks();}
+    inputs.forEach(i=>i.addEventListener('change',save));
+    document.getElementById('reset').addEventListener('click',()=>{localStorage.removeItem(key);inputs.forEach(i=>i.checked=false);save();});
+    load();
+
+    // update progress based on checked weekly/once items
+    function updateProgFromChecks(){const total=inputs.length;const done=inputs.filter(i=>i.checked).length; prog.style.width = (done/total*100)+'%'; document.getElementById('status').textContent = done+'/'+total+' פעולות'}
+    updateProgFromChecks();
+
+    // copy link (uses location.href)
+    document.getElementById('copy').addEventListener('click',()=>{
+      navigator.clipboard.writeText(location.href).then(()=>alert('קישור הועתק.'),()=>alert('העתקה נכשלה'));
+    });
+
+    // motivational quotes rotate
+    const quotes = [
+      'הובלה מתחילה בצעד קטן — תעשה אותו היום.',
+      'אנשים זוכרים מי לקח אחריות כשצריך.',
+      'תמיד יש חלון — תהיה מוכן כשיבוא.'
+    ];
+    let qidx=0; setInterval(()=>{qidx=(qidx+1)%quotes.length;document.getElementById('quote').textContent=quotes[qidx]},5000);
+  </script>
+</body>
 </html>
